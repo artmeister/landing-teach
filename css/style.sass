@@ -1,0 +1,366 @@
+@import "_variables"
+@import "_animations"
+@import "_fonts"
+@import "_main"
+@import "_buttons"
+@import "_dropdown"
+
+body
+	font-family: 'Roboto Flex',sans-serif
+	font-size: 16px
+	color: $blue
+	background-color: $white
+	background-image: url('/img/bg.png')
+	background-size: cover
+
+h1,h2,h3,h4,h5,h6,p
+	margin: 0
+
+h1
+	font-size: 24px
+	line-height: 32px
+	color: $black
+
+	@media(min-width: $lg)
+		font-size: 46px
+		line-height: 62px
+
+h2
+	font-size: 20px
+
+	@media(min-width: $lg)
+		font-size: 36px
+
+h3
+	font-size: 18px
+
+	@media(min-width: $lg)
+		font-size: 24px
+
+h4
+	font-size: inherit
+
+	@media(min-width: $lg)
+		font-size: 20px
+
+a
+	text-decoration: none
+	color: $white
+
+section
+	margin-bottom: 120px
+	overflow: hidden
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+	@media(max-width: 1399px)
+		padding-left: 0
+		padding-right: 0
+
+	@media(min-width: $xxl)
+		max-width: 1280px
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+	@media(max-width: 991px)
+		padding-left: 15px
+		padding-right: 15px
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl, .row
+	--bs-gutter-y: 0
+	--bs-gutter-x: 0
+
+.text-gradient-blue
+	background-image: $blue-gradient
+	background-clip: text
+	-webkit-text-fill-color: transparent
+
+.header
+	margin-top: 15px
+
+	@media(max-width: 991px)
+		width: 100%
+
+	@media(min-width: $lg)
+		margin-top: 60px
+
+	&:hover
+		.header-menu
+			margin: 0
+			opacity: 1
+			visibility: visible
+
+		.header-wrapper
+			&::before
+				opacity: .7
+
+	&-menu
+		transition: opacity .5s, margin .4s
+
+		@media(min-width: $lg)
+			margin-right: -500px
+			opacity: 0
+			visibility: collapse
+
+	.nav
+		gap: 10px
+
+		@media(min-width: $xl)
+			gap: 20px
+
+		.nav-link
+			color: $black
+			padding: 10px
+			border-radius: $b-radius
+
+			@media(min-width: $lg)
+				padding: 20.5px 10px
+
+			&:focus
+				box-shadow: none
+
+			&:not(.social-link)
+				&:hover, &.show
+					color: $white
+					background-color: $light-blue
+
+		.social-icon
+			fill: $black
+
+			&.instagram
+				&:hover
+					fill: url(#instagramGradient)
+
+			&.telegram
+				&:hover
+					fill: $telegram
+
+	&-wrapper
+		position: relative
+		max-width: 1420px
+		padding: 10px 15px
+		transition: all .5s
+
+		@media(min-width: $lg)
+			padding: 10px 60px
+
+		@media(min-width: $xxl)
+			padding: 10px 225px
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: $sky
+			border-radius: 30px
+			opacity: .7
+			z-index: -1
+			transition: all .5s
+
+			@media(min-width: $lg)
+				opacity: .2
+
+.block1
+	margin-top: 30px
+
+	h1
+		margin: 30px 0
+
+		li
+			color: $light-blue
+
+	&-text
+		max-width: max-content
+		margin: 45px 0 80px
+
+	&-btn
+		margin-bottom: 35px
+
+	&-person
+		&__front
+			top: -60px
+			left: calc(50% - -3px)
+
+		&__hands
+			img
+				transform: translate(-8px, 42px)
+
+	&-card
+		font-size: 14px
+		line-height: 20px
+
+		&1
+			top: -20px
+			right: -32px
+
+		&2
+			top: 90px
+			left: 30px
+
+		&3
+			top: calc(50% - 19px)
+			left: calc(50% - 17px)
+
+		&4
+			bottom: 90px
+			right: -50px
+
+		&-wrapper
+			background-color: $sky
+			border-radius: $b-radius
+			padding: 12px 15px
+
+			> .row
+				gap: 12px
+
+		.icon-wrapper
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			background: $blue-gradient
+			border-radius: $b-radius
+
+.block2
+	&-card
+		position: relative
+		width: 400px
+		height: 350px
+		border-radius: $b-radius30
+		padding: 35px 50px 50px
+		background-color: $sky
+		transition: color 0.5s
+		z-index: 1
+
+		&::before
+			position: absolute
+			content: ""
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			border-radius: $b-radius30
+			background-image: $blue-gradient
+			z-index: -1
+			transition: opacity 0.5s
+			opacity: 0
+
+		&:hover
+			color: $white
+
+			&::before
+				opacity: 1
+
+			img
+				transform: scale(1.1)
+
+				&.img-back
+					opacity: 0
+
+				&.img-front
+					opacity: 1
+
+		&1
+			.img-front
+				margin-left: -214px
+		&2
+			.img-front
+				margin-left: -208px
+		&3
+			.img-front
+				margin-left: -214px
+
+		h3
+			margin-top: -20px
+
+		img
+			transition: transform 1s, opacity 0s
+
+			&.img-front
+				opacity: 0
+
+	> .row
+		gap: 40px
+
+.block3
+	color: $white
+	background-image: $blue-gradient
+	border-radius: $b-radius30
+
+	&:hover
+		.rocket
+			transform: scale(0.9) translate(-10%, 10%)
+
+		.star1
+			top: 45px
+			left: calc(50% - 5px)
+
+		.star2
+			top: 115px
+			left: 80px
+
+		.star3
+			bottom: 85px
+			right: 155px
+
+	.rocket
+		transition: transform .5s
+
+		&-bg
+			mix-blend-mode: plus-lighter
+
+	.star
+		position: absolute
+		fill: $sky
+		transition: all .5s
+
+		&1
+			width: 30px
+			height: 30px
+			top: 40px
+			left: calc(50% - 30px)
+
+		&2
+			width: 70px
+			height: 70px
+			top: 100px
+			left: 85px
+
+		&3
+			width: 52px
+			height: 52px
+			bottom: 70px
+			right: 180px
+
+	&-img
+		@media (min-width: $xl)
+			margin-right: -60px
+
+	&-text
+		max-width: 630px
+		padding: 30px 30px 0
+
+		@media (min-width: $xl)
+			margin-right: 100px
+			padding: 55px 0
+
+	h2
+		margin-bottom: 15px
+
+	ul
+		font-size: 20px
+		list-style: none
+		margin: 30px 0
+		padding: 0
+
+		li
+			&::before
+				content: ""
+				display: inline-block
+				width: 10px
+				height: 10px
+				margin-right: 15px
+				background-color: $white
+				border-radius: 50%

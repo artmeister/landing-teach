@@ -1,0 +1,42 @@
+@import "_variables"
+
+.dropdown
+	z-index: 20
+
+	.dropdown-toggle
+		padding-right: 30px
+
+		&:after
+			transform: rotate(180deg)
+			transition: transform .5s
+
+		&.show
+			&:after
+				transform: none
+
+	.dropdown-menu
+		min-width: 100%
+		z-index: 21
+		border-radius: $b-radius20
+		box-shadow: 0 -2px 4px 0 $light-blue, 0 2px 4px 0 $light-blue
+		padding: 24px 22px 24px 24px
+
+		@media(min-width: $sm)
+			transform: translate(-50%, 3.5rem) !important
+			left: 50% !important
+
+		.dropdown-item
+			color: $blue
+			padding: 16px 0
+			border-bottom: 1px solid #32419510
+			gap: 10px
+
+			&:first-child
+				padding-top: 0
+
+			&:hover
+				color: $light-blue
+				background-color: transparent
+
+			.icon
+				fill: $light-blue
