@@ -122,12 +122,28 @@ section
 					color: $white
 					background-color: $light-blue
 
-		.social-icon
+		.social-icon,
+		defs stop
+			color: $black
 			fill: $black
+			transition: .5s
 
 			&.instagram
+				fill: url(#instagramGradient)
+
 				&:hover
-					fill: url(#instagramGradient)
+					> defs stop:first-child,
+					> defs stop:nth-child(2)
+						stop-color: #fdf497
+
+					> defs stop:nth-child(3)
+						stop-color: #fd5949
+
+					> defs stop:nth-child(4)
+						stop-color: #d6249f
+
+					> defs stop:last-child
+						stop-color: #285AEB
 
 			&.telegram
 				&:hover
