@@ -10,8 +10,6 @@ body
 	font-size: 16px
 	color: $blue
 	background-color: $white
-	background-image: url('/img/bg.png')
-	background-size: cover
 
 h1,h2,h3,h4,h5,h6,p
 	margin: 0
@@ -48,8 +46,11 @@ a
 	color: $white
 
 section
-	margin-bottom: 120px
+	margin-bottom: 60px
 	overflow: hidden
+
+	@media(min-width: $lg)
+		margin-bottom: 120px
 
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
 	@media(max-width: 1399px)
@@ -67,6 +68,30 @@ section
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl, .row
 	--bs-gutter-y: 0
 	--bs-gutter-x: 0
+
+.decor
+	width: 300px
+	height: 300px
+	border-radius: 50%
+	filter: blur(120px)
+
+	@media(min-width: $lg)
+		width: 792px
+		height: 792px
+		filter: blur(180px)
+
+	&1
+		background-color: $decor1
+		top: -12%
+		right: -11%
+
+	&2
+		background-color: $decor2
+		left: -11%
+		bottom: -18%
+
+	&-wrapper
+		height: 100vh
 
 .text-gradient-blue
 	background-image: $blue-gradient
@@ -194,33 +219,42 @@ section
 		margin-bottom: 35px
 
 	&-person
+		width: 570px
+		height: 495px
+
+		&__back
+			width: 387px
+			height: 387px
+			background-image: $blue-gradient
+			border-radius: 50%
+
 		&__front
-			top: -60px
-			left: calc(50% - -3px)
+			top: calc(45% + -3px)
+			left: calc(50% + 2px)
 
 		&__hands
 			img
-				transform: translate(-8px, 42px)
+				transform: translate(-8px, 43px)
 
 	&-card
 		font-size: 14px
 		line-height: 20px
 
 		&1
-			top: -20px
-			right: -32px
+			top: 20px
+			right: -5px
 
 		&2
-			top: 90px
-			left: 30px
+			top: 120px
+			left: 60px
 
 		&3
 			top: calc(50% - 19px)
 			left: calc(50% - 17px)
 
 		&4
-			bottom: 90px
-			right: -50px
+			bottom: 120px
+			right: -20px
 
 		&-wrapper
 			background-color: $sky
@@ -242,13 +276,17 @@ section
 .block2
 	&-card
 		position: relative
-		width: 400px
-		height: 350px
+		// width: 400px
+		// height: 350px
 		border-radius: $b-radius30
 		padding: 35px 50px 50px
 		background-color: $sky
 		transition: color 0.5s
 		z-index: 1
+
+		@media(min-width: $sm)
+			width: 400px
+			height: 350px
 
 		&::before
 			position: absolute

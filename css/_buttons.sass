@@ -56,7 +56,10 @@
 					opacity: 1
 
 		&_secondary
-			@include btn-get-variation($blue, $sky, none)
+			@include btn-get-variation($white, $light-blue, none)
+
+			@media(min-width: $lg)
+				@include btn-get-variation($blue, $sky, none)
 
 			&:hover
 				@include btn-get-variation($white, $light-blue, none)

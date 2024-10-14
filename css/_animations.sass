@@ -51,6 +51,11 @@
 	animation: scale .5s normal forwards linear
 	transform-origin: bottom right
 
+.transform1
+	animation: 60s linear 1s infinite alternate transform1
+.transform2
+	animation: 60s linear 1s infinite alternate transform2
+
 @keyframes flip2
 	0%
 		margin-top: -45px
@@ -135,64 +140,64 @@
 		transform: rotate(360deg)
 
 @keyframes move1
-	0%
-		top: -20px
-		right: -32px
+	25%
+		top: 20px
+		right: -5px
 
-	35%
-		top: -20px
-		right: -32px
+	50%
+		top: 20px
+		right: -5px
 
-	60%
-		top: -15px
-		right: -62px
+	75%
+		top: 25px
+		right: -40px
 
 	100%
-		top: -15px
-		right: -62px
+		top: 25px
+		right: -40px
 @keyframes move2
-	0%
-		top: 90px
-		left: 30px
+	25%
+		top: 120px
+		left: 60px
 
-	35%
-		top: 90px
-		left: 30px
+	50%
+		top: 120px
+		left: 60px
 
-	60%
-		top: 80px
-		left: 15px
+	75%
+		top: 110px
+		left: 30px
 
 	100%
-		top: 80px
-		left: 15px
+		top: 110px
+		left: 30px
 @keyframes move3
-	0%
+	25%
 		top: calc(50% - 19px)
 
-	35%
+	50%
 		top: calc(50% - 19px)
 
-	60%
+	75%
 		top: calc(50% - 29px)
 
 	100%
 		top: calc(50% - 29px)
 @keyframes move4
-	0%
-		bottom: 90px
-		right: -50px
+	25%
+		bottom: 120px
+		right: -20px
 
-	35%
-		bottom: 90px
-		right: -50px
+	50%
+		bottom: 120px
+		right: -20px
 
-	60%
-		bottom: 70px
+	75%
+		bottom: 100px
 		right: 5px
 
 	100%
-		bottom: 70px
+		bottom: 100px
 		right: 5px
 
 @keyframes scaleX
@@ -205,3 +210,34 @@
 		transform: scale(0)
 	to
 		transform: scale(1)
+
+@keyframes transform1
+	20%
+		transform: translate(-89%, 32%)
+	30%
+		transform: translate(-89%, 32%)
+	40%
+		transform: translate(0, 0)
+	60%
+		transform: translate(0, 100%)
+	80%
+		transform: translate(-89%, 32%)
+	90%
+		transform: translate(-89%, 32%)
+	100%
+		transform: translate(0, 0)
+@keyframes transform2
+	20%
+		transform: translate(89%, -32%)
+	30%
+		transform: translate(89%, -32%)
+	40%
+		transform: translate(0, 0)
+	60%
+		transform: translate(0, -100%)
+	80%
+		transform: translate(89%, -32%)
+	90%
+		transform: translate(89%, -32%)
+	100%
+		transform: translate(0, 0)

@@ -15,6 +15,11 @@
 </head>
 
 <body class="d-flex flex-column justify-content-between position-relative overflow-x-hidden">
+	<div class="decor-wrapper position-absolute w-100">
+		<div class="decor decor1 transform1 position-absolute"></div>
+		<div class="decor decor2 transform2 position-absolute"></div>
+	</div>
+
 	<header class="header mx-auto">
 		<div class="container-fluid">
 			<div class="header-wrapper">
@@ -128,21 +133,17 @@
 						</div>
 					</div>
 
-					<div class="col-auto">
-						<div class="position-relative">
-							<div class="block1-person position-relative">
-								<div class="block1-person__circle position-absolute top-50 start-50 translate-middle">
-									<img src="img/person-circle.png" class="rotate" alt="person">
-								</div>
-								<div class="block1-person__back position-absolute top-50 start-50 translate-middle">
-									<img src="img/person-back.png" alt="person">
-								</div>
-								<div class="block1-person__front position-relative translate-middle-x z-1">
-									<img src="img/person.png" alt="person">
-								</div>
-								<div class="block1-person__hands position-absolute top-50 start-50 translate-middle z-2">
-									<img src="img/person-hands.png" alt="person">
-								</div>
+					<div class="col-auto d-none d-md-block">
+						<div class="block1-person position-relative">
+							<div class="block1-person__circle position-absolute top-50 start-50 translate-middle">
+								<img src="img/person-circle.png" class="rotate" alt="person">
+							</div>
+							<div class="block1-person__back position-absolute top-50 start-50 translate-middle"></div>
+							<div class="block1-person__front position-absolute translate-middle z-1">
+								<img src="img/person.png" alt="person">
+							</div>
+							<div class="block1-person__hands position-absolute top-50 start-50 translate-middle z-2">
+								<img src="img/person-hands.png" alt="person">
 							</div>
 
 							<div class="block1-card block1-card1 position-absolute move1">
@@ -208,7 +209,7 @@
 
 			<section class="block2">
 				<div class="row justify-content-center">
-					<div class="col-auto">
+					<div class="col-12 col-sm-auto">
 						<div class="block2-card block2-card1">
 							<div class="row flex-column text-center">
 								<div class="col">
@@ -226,7 +227,7 @@
 						</div>
 					</div>
 
-					<div class="col-auto">
+					<div class="col-12 col-sm-auto">
 						<div class="block2-card block2-card2">
 							<div class="row flex-column text-center">
 								<div class="col">
@@ -244,7 +245,7 @@
 						</div>
 					</div>
 
-					<div class="col-auto">
+					<div class="col-12 col-sm-auto">
 						<div class="block2-card block2-card3">
 							<div class="row flex-column text-center">
 								<div class="col">
